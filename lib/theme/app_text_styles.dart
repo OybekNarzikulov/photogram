@@ -5,19 +5,19 @@ import './app_color.dart';
 class AppTextStyles {
   static const whiteButtonStyle = TextStyle(
     color: AppColor.black,
-    fontSize: 20,
+    fontSize: 15,
     fontWeight: FontWeight.w900,
     fontFamily: 'Roboto-Black',
   );
   static const blackButtonStyle = TextStyle(
     color: AppColor.white,
-    fontSize: 20,
+    fontSize: 15,
     fontWeight: FontWeight.w900,
     fontFamily: 'Roboto-Black',
   );
   static const googleButtonStyle = TextStyle(
     color: AppColor.blue,
-    fontSize: 13,
+    fontSize: 15,
     fontWeight: FontWeight.w900,
     fontFamily: 'Roboto-Black',
   );
@@ -53,9 +53,9 @@ class AppTextStyles {
   );
   static const description = TextStyle(
     color: AppColor.black,
-    fontSize: 13,
-    fontWeight: FontWeight.w700,
-    fontFamily: 'Roboto-Bold',
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Roboto-Regular',
   );
   static const userEmail = TextStyle(
     color: AppColor.black,

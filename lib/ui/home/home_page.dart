@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:photogram_app/routes/app_routes.dart';
 import 'package:photogram_app/theme/app_color.dart';
+import 'package:photogram_app/theme/app_constants.dart';
 import 'package:photogram_app/theme/app_text_styles.dart';
+import 'package:photogram_app/ui/registration_1/registration_page_1.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -50,11 +53,11 @@ class _HomePageState extends State<HomePage> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
-                       Text(
+                      Text(
                         'Quantic Jamoasi',
                         style: AppTextStyles.mainPageTitle,
                       ),
-                       Text(
+                      Text(
                         'Photogram beta 1.0',
                         style: AppTextStyles.mainPageSubtitle,
                       ),
@@ -68,11 +71,16 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        Navigator.pushNamed(AppConstants.key.currentState!.context, AppRoutes.loginPage);
+                      });
+                    },
                     child: const Text(
-                      'Kirish',
+                      'KIRISH',
                       style: AppTextStyles.whiteButtonStyle,
                     ),
+                    autofocus: true,
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 15),
                       primary: AppColor.white,
@@ -85,11 +93,16 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        Navigator.pushNamed(AppConstants.key.currentState!.context, AppRoutes.registration_1);
+                      });
+                    },
                     child: const Text(
-                      'Kirish',
+                      'RO\'YXATDAN O\'TISH',
                       style: AppTextStyles.blackButtonStyle,
                     ),
+                    autofocus: true,
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 15),
                       primary: AppColor.black,

@@ -4,20 +4,14 @@ import 'package:photogram_app/theme/app_color.dart';
 import 'package:photogram_app/theme/app_constants.dart';
 import 'package:photogram_app/theme/app_text_styles.dart';
 
-class RegistationPage_1 extends StatefulWidget {
-  const RegistationPage_1({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
-  _RegistationPag_1State createState() => _RegistationPag_1State();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _RegistationPag_1State extends State<RegistationPage_1> {
-  TextEditingController userText = TextEditingController();
-
-  void clearText() {
-    return userText.clear();
-  }
-
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +28,7 @@ class _RegistationPag_1State extends State<RegistationPage_1> {
             Container(
               alignment: Alignment.centerLeft,
               child: const Text(
-                'Ro’yxatdan o’tish',
+                'Kirish',
                 style: AppTextStyles.otherTitles,
               ),
             ),
@@ -72,12 +66,9 @@ class _RegistationPag_1State extends State<RegistationPage_1> {
               width: MediaQuery.of(context).size.width,
               child: ElevatedButton(
                 onPressed: () {
-                  setState(() {
-                    Navigator.pushNamed(AppConstants.key.currentState!.context, AppRoutes.registration_2);
-                  });
                 },
                 child: const Text(
-                  'KEYINGISI',
+                  'KIRISH',
                   style: AppTextStyles.blackButtonStyle,
                 ),
                 autofocus: true,
@@ -101,7 +92,7 @@ class _RegistationPag_1State extends State<RegistationPage_1> {
                 child: ElevatedButton(
                   onPressed: () {},
                   child: const Text(
-                    'GOOGLE BILAN RO\'YXATDAN O\'TISH',
+                    'GOOGLE BILAN KIRISH',
                     style: AppTextStyles.googleButtonStyle,
                   ),
                   autofocus: true,
