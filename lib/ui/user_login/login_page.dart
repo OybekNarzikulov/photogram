@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                 style: AppTextStyles.otherTitles,
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             const TextField(
               decoration: InputDecoration(
                 hintText: 'Email field',
@@ -45,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             const TextField(
               obscureText: true,
               enableSuggestions: false,
@@ -60,12 +60,16 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Container(
               height: 50,
               width: MediaQuery.of(context).size.width,
               child: ElevatedButton(
                 onPressed: () {
+                  setState(() {
+                    Navigator.pushNamed(AppConstants.key.currentState!.context,
+                        AppRoutes.mainPage);
+                  });
                 },
                 child: const Text(
                   'KIRISH',
@@ -77,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Container(
               height: 50,
               decoration: BoxDecoration(
