@@ -59,8 +59,7 @@ class AppTextStyles {
   );
   static const userEmail = TextStyle(
     color: AppColor.black,
-    fontSize: 20,
-    fontWeight: FontWeight.w700,
-    fontFamily: 'Comfortaa-Bold',
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
   );
 }

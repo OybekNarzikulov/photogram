@@ -8,6 +8,7 @@ class AppRoutes{
   static const mainPage = '/main_page';
   static const searchPage = '/search_page';
   static const accountPage = '/account_page';
-
+  static const chatListPage = '/chat_list_page';
+  static const chatPage = '/chat_page';
 
 }

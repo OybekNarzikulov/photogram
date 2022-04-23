@@ -18,21 +18,19 @@ class _AccountPageState extends State<AccountPage> {
   void onTap(int index) {
     setState(() {
       _selectedIndex = index;
-      if (_selectedIndex == 0) {
-        Navigator.pushNamed(
-            AppConstants.key.currentState!.context, AppRoutes.mainPage);
-      } else if (_selectedIndex == 1) {
-        Navigator.pushNamed(
-            AppConstants.key.currentState!.context, AppRoutes.searchPage);
-      }else if (_selectedIndex == 2) {
-        Navigator.pushNamed(
-            AppConstants.key.currentState!.context, AppRoutes.accountPage);
-      }else if (_selectedIndex == 3) {
-        Navigator.pushNamed(
-            AppConstants.key.currentState!.context, AppRoutes.accountPage);
-      }else if (_selectedIndex == 4) {
-        Navigator.pushNamed(
-            AppConstants.key.currentState!.context, AppRoutes.accountPage);
+      switch (_selectedIndex) {
+        case 0:
+          Navigator.pushNamed(
+              AppConstants.key.currentState!.context, AppRoutes.mainPage);
+          break;
+        case 1:
+          Navigator.pushNamed(
+              AppConstants.key.currentState!.context, AppRoutes.searchPage);
+          break;
+        case 3:
+          Navigator.pushNamed(
+              AppConstants.key.currentState!.context, AppRoutes.chatListPage);
+          break;
       }
     });
   }
@@ -50,39 +48,55 @@ class _AccountPageState extends State<AccountPage> {
         margin: const EdgeInsets.symmetric(horizontal: 13),
         child: Column(
           children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(300),
+              child: Container(
+                height: 120,
+                child: Image.network(
+                    'https://i.pinimg.com/474x/be/d2/3f/bed23f26584cc6e9de5b673eb0864abd.jpg'),
+              ),
+            ),
             Container(
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.center,
               child: const Text(
-                'Izlash',
+                'Umidaxon',
                 style: AppTextStyles.otherTitles,
               ),
             ),
-            SizedBox(height: 30),
-            const TextField(
-              decoration: InputDecoration(
-                hintText: 'Search',
-                // suffixIcon: IconButton(
-                //     onPressed: clearText, icon: Icon(Icons.clear)),
-                contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blue),
-                  borderRadius: BorderRadius.zero,
-                ),
+            Container(
+              alignment: Alignment.center,
+              child: const Text(
+                '@umida12',
+                style: AppTextStyles.userEmail,
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 10),
             Container(
-              child: Text(
-                'Barcha natijalar',
-                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15),
+              height: 50,
+              width: MediaQuery.of(context).size.width,
+              child: ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    Navigator.pushNamed(AppConstants.key.currentState!.context,
+                        AppRoutes.loginPage);
+                  });
+                },
+                child: const Text(
+                  'XABAR',
+                  style: AppTextStyles.whiteButtonStyle,
+                ),
+                autofocus: true,
+                style: ElevatedButton.styleFrom(
+                    primary: AppColor.white,
+                    side: BorderSide(color: AppColor.black, width: 2),
+                    elevation: 0),
               ),
-              alignment: Alignment.centerLeft,
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Container(
-              height: 400,
+              height: 335,
               child: GridView.count(
                 mainAxisSpacing: 10,
                 crossAxisSpacing: 10,
@@ -176,7 +190,7 @@ class _AccountPageState extends State<AccountPage> {
                 ],
               ),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 10),
             Container(
               height: 50,
               width: MediaQuery.of(context).size.width,
@@ -188,7 +202,7 @@ class _AccountPageState extends State<AccountPage> {
                   });
                 },
                 child: const Text(
-                  'RO\'YXATDAN O\'TISH',
+                  'KO\'PROQ KO\'RSATISH',
                   style: AppTextStyles.whiteButtonStyle,
                 ),
                 autofocus: true,

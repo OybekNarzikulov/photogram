@@ -23,21 +23,13 @@ class _MainPageState extends State<MainPage> {
           Navigator.pushNamed(
               AppConstants.key.currentState!.context, AppRoutes.searchPage);
           break;
-        case 2:
-          Navigator.pushNamed(
-              AppConstants.key.currentState!.context, AppRoutes.loginPage);
-          break;
         case 3:
           Navigator.pushNamed(
-              AppConstants.key.currentState!.context, AppRoutes.loginPage);
+              AppConstants.key.currentState!.context, AppRoutes.chatListPage);
           break;
         case 4:
           Navigator.pushNamed(
-              AppConstants.key.currentState!.context, AppRoutes.loginPage);
-          break;
-        default:
-          Navigator.pushNamed(
-              AppConstants.key.currentState!.context, AppRoutes.mainPage);
+              AppConstants.key.currentState!.context, AppRoutes.accountPage);
           break;
       }
     });
@@ -48,7 +40,6 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       backgroundColor: AppColor.white,
       appBar: AppBar(
-        title: Text('Hwllo'),
         backgroundColor: AppColor.white,
         elevation: 0,
         automaticallyImplyLeading: false,
@@ -65,8 +56,9 @@ class _MainPageState extends State<MainPage> {
                 style: AppTextStyles.otherTitles,
               ),
             ),
+            SizedBox(height: 10,),
             Container(
-              height: MediaQuery.of(context).size.height * 0.6,
+              height: MediaQuery.of(context).size.height * 0.7 + 20,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
