@@ -21,15 +21,11 @@ class _SearchPageState extends State<SearchPage> {
       switch (_selectedIndex) {
         case 0:
           Navigator.pushNamed(
-              AppConstants.key.currentState!.context, AppRoutes.loginPage);
+              AppConstants.key.currentState!.context, AppRoutes.mainPage);
           break;
         case 1:
           Navigator.pushNamed(
               AppConstants.key.currentState!.context, AppRoutes.searchPage);
-          break;
-        case 2:
-          Navigator.pushNamed(
-              AppConstants.key.currentState!.context, AppRoutes.loginPage);
           break;
         case 3:
           Navigator.pushNamed(
@@ -77,8 +73,16 @@ class _SearchPageState extends State<SearchPage> {
               ),
             ),
             SizedBox(height: 30),
-            Container(child: Text('Barcha natijalar', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15),), alignment: Alignment.centerLeft,),
-            SizedBox(height: 20,),
+            Container(
+              child: Text(
+                'Barcha natijalar',
+                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15),
+              ),
+              alignment: Alignment.centerLeft,
+            ),
+            SizedBox(
+              height: 20,
+            ),
             Container(
               height: 400,
               child: GridView.count(
@@ -191,10 +195,9 @@ class _SearchPageState extends State<SearchPage> {
                 ),
                 autofocus: true,
                 style: ElevatedButton.styleFrom(
-                  primary: AppColor.white,
-                  side: BorderSide(color: AppColor.black, width: 2),
-                  elevation: 0
-                ),
+                    primary: AppColor.white,
+                    side: BorderSide(color: AppColor.black, width: 2),
+                    elevation: 0),
               ),
             ),
           ],

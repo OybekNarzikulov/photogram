@@ -18,21 +18,23 @@ class _AccountPageState extends State<AccountPage> {
   void onTap(int index) {
     setState(() {
       _selectedIndex = index;
-      if (_selectedIndex == 0) {
-        Navigator.pushNamed(
-            AppConstants.key.currentState!.context, AppRoutes.mainPage);
-      } else if (_selectedIndex == 1) {
-        Navigator.pushNamed(
-            AppConstants.key.currentState!.context, AppRoutes.searchPage);
-      }else if (_selectedIndex == 2) {
-        Navigator.pushNamed(
-            AppConstants.key.currentState!.context, AppRoutes.accountPage);
-      }else if (_selectedIndex == 3) {
-        Navigator.pushNamed(
-            AppConstants.key.currentState!.context, AppRoutes.accountPage);
-      }else if (_selectedIndex == 4) {
-        Navigator.pushNamed(
-            AppConstants.key.currentState!.context, AppRoutes.accountPage);
+      switch (_selectedIndex) {
+        case 0:
+          Navigator.pushNamed(
+              AppConstants.key.currentState!.context, AppRoutes.mainPage);
+          break;
+        case 1:
+          Navigator.pushNamed(
+              AppConstants.key.currentState!.context, AppRoutes.searchPage);
+          break;
+        case 3:
+          Navigator.pushNamed(
+              AppConstants.key.currentState!.context, AppRoutes.loginPage);
+          break;
+        case 4:
+          Navigator.pushNamed(
+              AppConstants.key.currentState!.context, AppRoutes.accountPage);
+          break;
       }
     });
   }

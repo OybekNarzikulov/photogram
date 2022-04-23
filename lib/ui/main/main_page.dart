@@ -23,10 +23,6 @@ class _MainPageState extends State<MainPage> {
           Navigator.pushNamed(
               AppConstants.key.currentState!.context, AppRoutes.searchPage);
           break;
-        case 2:
-          Navigator.pushNamed(
-              AppConstants.key.currentState!.context, AppRoutes.loginPage);
-          break;
         case 3:
           Navigator.pushNamed(
               AppConstants.key.currentState!.context, AppRoutes.loginPage);
