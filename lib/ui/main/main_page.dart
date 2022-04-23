@@ -45,7 +45,7 @@ class _MainPageState extends State<MainPage> {
         automaticallyImplyLeading: false,
       ),
       body: Container(
-        padding: const EdgeInsets.only(left: 10, right: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
             Container(
@@ -56,7 +56,9 @@ class _MainPageState extends State<MainPage> {
                 style: AppTextStyles.otherTitles,
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Container(
               height: MediaQuery.of(context).size.height * 0.7 + 20,
               child: Row(
@@ -66,38 +68,81 @@ class _MainPageState extends State<MainPage> {
                   SingleChildScrollView(
                     child: Column(
                       children: [
-                        Image.network(
-                          'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
-                          height: 220,
-                          width: MediaQuery.of(context).size.width / 2 - 30,
-                          fit: BoxFit.fill,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              Navigator.pushNamed(
+                                AppConstants.key.currentState!.context,
+                                AppRoutes.storiesPage,
+                              );
+                            });
+                          },
+                          child: Image.network(
+                            'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
+                            height: 220,
+                            width: MediaQuery.of(context).size.width / 2 - 30,
+                            fit: BoxFit.fill,
+                          ),
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Image.network(
-                          'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
-                          height: 310,
-                          width: MediaQuery.of(context).size.width / 2 - 30,
-                          fit: BoxFit.fill,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              Navigator.pushNamed(
+                                AppConstants.key.currentState!.context,
+                                AppRoutes.storiesPage,
+                              );
+                            });
+                          },
+                          child: Image.network(
+                            'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
+                            height: 220,
+                            width: MediaQuery.of(context).size.width / 2 - 30,
+                            fit: BoxFit.fill,
+                          ),
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Image.network(
-                          'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
-                          height: 220,
-                          width: MediaQuery.of(context).size.width / 2 - 30,
-                          fit: BoxFit.fill,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              Navigator.pushNamed(
+                                AppConstants.key.currentState!.context,
+                                AppRoutes.storiesPage,
+                              );
+                            });
+                          },
+                          child: Image.network(
+                            'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
+                            height: 220,
+                            width: MediaQuery.of(context).size.width / 2 - 30,
+                            fit: BoxFit.fill,
+                          ),
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Image.network(
-                          'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
-                          height: 310,
-                          width: MediaQuery.of(context).size.width / 2 - 30,
-                          fit: BoxFit.fill,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              Navigator.pushNamed(
+                                AppConstants.key.currentState!.context,
+                                AppRoutes.storiesPage,
+                              );
+                            });
+                          },
+                          child: Image.network(
+                            'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
+                            height: 220,
+                            width: MediaQuery.of(context).size.width / 2 - 30,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                       ],
                     ),
@@ -105,38 +150,81 @@ class _MainPageState extends State<MainPage> {
                   SingleChildScrollView(
                     child: Column(
                       children: [
-                        Image.network(
-                          'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
-                          height: 310,
-                          width: MediaQuery.of(context).size.width / 2 - 30,
-                          fit: BoxFit.fill,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              Navigator.pushNamed(
+                                AppConstants.key.currentState!.context,
+                                AppRoutes.storiesPage,
+                              );
+                            });
+                          },
+                          child: Image.network(
+                            'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
+                            height: 220,
+                            width: MediaQuery.of(context).size.width / 2 - 30,
+                            fit: BoxFit.fill,
+                          ),
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Image.network(
-                          'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
-                          height: 220,
-                          width: MediaQuery.of(context).size.width / 2 - 30,
-                          fit: BoxFit.fill,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              Navigator.pushNamed(
+                                AppConstants.key.currentState!.context,
+                                AppRoutes.storiesPage,
+                              );
+                            });
+                          },
+                          child: Image.network(
+                            'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
+                            height: 220,
+                            width: MediaQuery.of(context).size.width / 2 - 30,
+                            fit: BoxFit.fill,
+                          ),
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Image.network(
-                          'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
-                          height: 310,
-                          width: MediaQuery.of(context).size.width / 2 - 30,
-                          fit: BoxFit.fill,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              Navigator.pushNamed(
+                                AppConstants.key.currentState!.context,
+                                AppRoutes.storiesPage,
+                              );
+                            });
+                          },
+                          child: Image.network(
+                            'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
+                            height: 220,
+                            width: MediaQuery.of(context).size.width / 2 - 30,
+                            fit: BoxFit.fill,
+                          ),
                         ),
                         SizedBox(
                           height: 10,
                         ),
-                        Image.network(
-                          'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
-                          height: 220,
-                          width: MediaQuery.of(context).size.width / 2 - 30,
-                          fit: BoxFit.fill,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              Navigator.pushNamed(
+                                AppConstants.key.currentState!.context,
+                                AppRoutes.storiesPage,
+                              );
+                            });
+                          },
+                          child: Image.network(
+                            'https://www.teahub.io/photos/full/55-558274_aesthetic-photography-pinterest-background.jpg',
+                            height: 220,
+                            width: MediaQuery.of(context).size.width / 2 - 30,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                       ],
                     ),

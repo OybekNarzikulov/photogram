@@ -10,5 +10,7 @@ class AppRoutes{
   static const accountPage = '/account_page';
   static const chatListPage = '/chat_list_page';
   static const chatPage = '/chat_page';
+  static const storiesPage = '/stories_page';
+
 
 }

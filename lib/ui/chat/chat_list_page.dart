@@ -35,6 +35,12 @@ class _ChatListPageState extends State<ChatListPage> {
     });
   }
 
+  List<DetailModel> models = [
+    DetailModel(
+      imageUrl: 'https://i.pinimg.com/474x/be/d2/3f/bed23f26584cc6e9de5b673eb0864abd.jpg',
+      userName: 'James',)
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,11 +80,13 @@ class _ChatListPageState extends State<ChatListPage> {
         child: Column(
           children: [
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 setState(() {
                   Navigator.pushNamed(
                       AppConstants.key.currentState!.context,
-                      AppRoutes.chatPage);
+                      AppRoutes.chatPage,
+                      arguments: models[0],
+                  );
                 });
               },
               child: Card(
@@ -97,34 +105,56 @@ class _ChatListPageState extends State<ChatListPage> {
                 ),
               ),
             ),
-            Card(
-              elevation: 1,
-              child: ListTile(
-                leading: ClipRRect(
-                  borderRadius: BorderRadius.circular(300),
-                  child: Image.network(
-                      'https://i.pinimg.com/474x/be/d2/3f/bed23f26584cc6e9de5b673eb0864abd.jpg'),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  Navigator.pushNamed(
+                    AppConstants.key.currentState!.context,
+                    AppRoutes.chatPage,
+                    arguments: models[0],
+                  );
+                });
+              },
+              child: Card(
+                elevation: 1,
+                child: ListTile(
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(300),
+                    child: Image.network(
+                        'https://i.pinimg.com/474x/be/d2/3f/bed23f26584cc6e9de5b673eb0864abd.jpg'),
+                  ),
+                  title: const Text(
+                    'James',
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+                  ),
+                  subtitle: Text('Thank you! That was very helpful'),
                 ),
-                title: const Text(
-                  'James',
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
-                ),
-                subtitle: Text('Thank you! That was very helpful'),
               ),
             ),
-            Card(
-              elevation: 1,
-              child: ListTile(
-                leading: ClipRRect(
-                  borderRadius: BorderRadius.circular(300),
-                  child: Image.network(
-                      'https://i.pinimg.com/474x/be/d2/3f/bed23f26584cc6e9de5b673eb0864abd.jpg'),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  Navigator.pushNamed(
+                    AppConstants.key.currentState!.context,
+                    AppRoutes.chatPage,
+                    arguments: models[0],
+                  );
+                });
+              },
+              child: Card(
+                elevation: 1,
+                child: ListTile(
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(300),
+                    child: Image.network(
+                        'https://i.pinimg.com/474x/be/d2/3f/bed23f26584cc6e9de5b673eb0864abd.jpg'),
+                  ),
+                  title: const Text(
+                    'James',
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+                  ),
+                  subtitle: Text('Thank you! That was very helpful'),
                 ),
-                title: const Text(
-                  'James',
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
-                ),
-                subtitle: Text('Thank you! That was very helpful'),
               ),
             ),
           ],
@@ -160,4 +190,11 @@ class _ChatListPageState extends State<ChatListPage> {
       ),
     );
   }
+}
+
+class DetailModel {
+  final String imageUrl;
+  final String userName;
+
+  DetailModel({required this.imageUrl, required this.userName});
 }

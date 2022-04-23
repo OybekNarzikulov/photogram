@@ -1,5 +1,6 @@
 import 'package:photogram_app/ui/main/main_page.dart';
 import 'package:photogram_app/ui/search/search_page.dart';
+import 'package:photogram_app/ui/stories/stories_page.dart';
 
 import '../ui/account/account_page.dart';
 import '../ui/chat/chat_list_page.dart';
@@ -21,6 +22,7 @@ class AppPages {
     AppRoutes.accountPage: (context) => const AccountPage(),
     AppRoutes.chatListPage: (context) => const ChatListPage(),
     AppRoutes.chatPage: (context) => const ChatPage(),
+    AppRoutes.storiesPage: (context) => const StoriesPage(),
 
   };
 }
